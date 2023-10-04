@@ -1,5 +1,5 @@
 import "./App.scss";
-import MatecuTopbarLayout from "./lib/components/MatecuTopbarLayout";
+import MatecuTopbarLayout from "../lib/components/MatecuTopbarLayout";
 
 function App() {
   return (
