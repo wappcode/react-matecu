@@ -34,8 +34,8 @@ const MatecuTopbarLayout = forwardRef(
     } = props;
     const classes: string[] = [];
     const [scrolled, setScrolled] = useState(false);
-    const layoutElement = useRef<any>(null);
-    const bodyElement = useRef<any>(null);
+    const layoutElement = useRef<HTMLDivElement | null>(null);
+    const bodyElement = useRef<HTMLDivElement | null>(null);
     let mobileStyleValue = mobileStyle ?? false;
     const mobileWidthValue = mobileWidth ?? 768;
     const spyScroll = (scrollabe: HTMLElement) => {
@@ -75,7 +75,7 @@ const MatecuTopbarLayout = forwardRef(
           resizeHandler(width);
         }
       });
-      bodyElement?.current?.addEventListener("scroll", (ev: any) => {
+      bodyElement?.current?.addEventListener("scroll", () => {
         spyScroll(bodyElement.current!);
       });
       resizeObserver.observe(layoutElement.current!);

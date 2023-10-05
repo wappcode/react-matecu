@@ -34,7 +34,8 @@ function App() {
                   <button className="fabbtn">+</button>
                 </MatecuTopbarFab>
                 <MatecuTopbarTitle>
-                  <h1>Hola mundo</h1>
+                  Hola mundo el pueblo unido jamás será vencido ni el prd ni el
+                  pan
                 </MatecuTopbarTitle>
               </MatecuTopbarHeaderColumn>
             }
