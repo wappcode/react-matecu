@@ -61,8 +61,8 @@ const MatecuTopbarSearch: React.FunctionComponent<MatecuTopbarSearchProps> = (
 
   const displayValue = display ?? true;
   const placeholderValue = placeholder ?? "";
-  const mobileStyleClass = mobileStyle ? "mobile-style" : "";
-  const activeSearchClass = activeMobileSearch ? "active-mobile" : "";
+  const mobileStyleClass = mobileStyle ? styles["mobile-style"] : "";
+  const activeSearchClass = activeMobileSearch ? styles["active-mobile"] : "";
 
   useEffect(() => {
     const hasVal = calculateHasValue(searchValue);

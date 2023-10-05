@@ -12,7 +12,7 @@ const MatecuTopbarFab: React.FunctionComponent<MatecuTopbarFabProps> = (
 ) => {
   const { children, display, mobileStyle } = props;
   const displayValue = display ?? true;
-  const mobileStyleClass = mobileStyle ? "mobile-style" : "";
+  const mobileStyleClass = mobileStyle ? styles["mobile-style"] : "";
 
   return (
     <>
