@@ -1,0 +1,18 @@
+:root {
+  --mtb-title-padding: 6px;
+  --mtb-title-margin: 0px;
+}
+.matecu-topbar-title {
+  &,
+  * {
+    box-sizing: border-box;
+    outline: none;
+  }
+  border: 1px solid yellow;
+  max-height: var(--mtb-bar-height, 64px);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: var(--mtb-title-padding);
+  margin: var(--mtb-title-margin);
+}
