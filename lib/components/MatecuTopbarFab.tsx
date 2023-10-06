@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./MatecuTopbarFab.module.scss";
 
-interface MatecuTopbarFabProps {
+export interface MatecuTopbarFabProps {
   children?: React.ReactNode[] | React.ReactNode;
   display?: boolean;
   mobileStyle?: boolean;

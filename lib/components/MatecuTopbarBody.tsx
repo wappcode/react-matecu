@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MatecuTopbarBody.module.scss";
-interface MatecuTopbarBodyProps {
+export interface MatecuTopbarBodyProps {
   children?: React.ReactNode | React.ReactNode[];
 }
 const MatecuTopbarBody: React.FunctionComponent<MatecuTopbarBodyProps> = (

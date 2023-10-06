@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MatecuTopbarAction.module.scss";
-interface MatecuTopbarActionProps {
+export interface MatecuTopbarActionProps {
   children?: React.ReactNode[] | React.ReactNode | undefined;
 }
 

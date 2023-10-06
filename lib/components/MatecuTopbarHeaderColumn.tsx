@@ -1,6 +1,6 @@
 import React from "react";
 
-interface MatecuTopbarHeaderColumnProps {
+export interface MatecuTopbarHeaderColumnProps {
   children?: React.ReactNode[] | React.ReactNode | undefined;
 }
 

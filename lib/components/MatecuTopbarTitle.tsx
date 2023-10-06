@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MatecuTopbarTitle.module.scss";
-interface MatecuTopbarTitleProps {
+export interface MatecuTopbarTitleProps {
   display?: boolean;
   children?: React.ReactNode | React.ReactNode[];
 }

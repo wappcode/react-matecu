@@ -21,22 +21,23 @@ El contenido de la página tiene una función que se puede llamar para realizar 
 ## Ejemplo básico
 
 ```
-import MatecuTopbarLayout from "react-matecu";
-import MatecuTopbarHeaderRow from "react-matecu";
-import MatecuTopbarHeaderColumn from "react-matecu";
-import MatecuTopbarAction from "react-matecu";
-import MatecuTopbarFab from "react-matecu";
-import MatecuTopbarSearch from "react-matecu";
-import MatecuTopbarTitle from "react-matecu";
-import MatecuTopbarBody from "react-matecu";
-import { useRef, useState } from "react-matecu";
-function MainPage() {
-  const searchValueChangesHandler = (value: string) => {
+import { useRef, useState } from "react";
+import { MatecuTopbarLayout } from "react-matecu";
+import { MatecuTopbarHeaderRow } from "react-matecu";
+import { MatecuTopbarHeaderColumn } from "react-matecu";
+import { MatecuTopbarAction } from "react-matecu";
+import { MatecuTopbarFab } from "react-matecu";
+import { MatecuTopbarSearch } from "react-matecu";
+import { MatecuTopbarTitle } from "react-matecu";
+import { MatecuTopbarBody } from "react-matecu";
+
+function MatecuLayout() {
+  const searchValueChangesHandler = (value) => {
     console.log("Buscando valor", value);
   };
-  const tobarLayout = useRef<{ scrollTop: () => void }>();
+  const tobarLayout = useRef();
   const [mobileStyle, setMobileStyle] = useState(false);
-  const resize = (width: number) => {
+  const resize = (width) => {
     console.log("resizing", width);
   };
   return (
@@ -50,25 +51,36 @@ function MainPage() {
           <MatecuTopbarHeaderRow
             leftColumn={
               <MatecuTopbarHeaderColumn>
-                <MatecuTopbarAction>L</MatecuTopbarAction>
-                <MatecuTopbarAction>L1</MatecuTopbarAction>
+                <MatecuTopbarAction>
+                  <small>NAV</small>
+                </MatecuTopbarAction>
                 <MatecuTopbarFab mobileStyle={mobileStyle}>
-                  <button className="fabbtn">+</button>
+                  <button
+                    className="fabbtn"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                    }}
+                  >
+                    ADD
+                  </button>
                 </MatecuTopbarFab>
-                <MatecuTopbarTitle>
-                  Hola mundo el pueblo unido jamás será vencido ni el prd ni el
-                  pan
-                </MatecuTopbarTitle>
+                <MatecuTopbarTitle>Título de la página</MatecuTopbarTitle>
               </MatecuTopbarHeaderColumn>
             }
             rightColumn={
               <MatecuTopbarHeaderColumn>
-                <MatecuTopbarAction>R</MatecuTopbarAction>
                 <MatecuTopbarSearch
                   mobileStyle={mobileStyle}
                   placeholder="Buscar..."
                   valueChangesHandler={searchValueChangesHandler}
+                  clearIcon={"X"}
+                  searchIcon={"O\\"}
                 />
+                <MatecuTopbarAction>
+                  <small>MENU</small>
+                </MatecuTopbarAction>
               </MatecuTopbarHeaderColumn>
             }
           />
@@ -76,7 +88,7 @@ function MainPage() {
         body={
           <MatecuTopbarBody>
             Contenido de la página...
-            <button onClick={() => tobarLayout.current!.scrollTop()}>
+            <button onClick={() => tobarLayout.current.scrollTop()}>
               Scroll
             </button>
           </MatecuTopbarBody>
@@ -85,9 +97,7 @@ function MainPage() {
     </>
   );
 }
-
-export default MainPage;
-
+export default MatecuLayout;
 
 
 ```

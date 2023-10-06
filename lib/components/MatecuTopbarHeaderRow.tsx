@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./MatecuTopbarHeaderRow.module.scss";
 
-interface MatecuTopbarHeaderRowProps
+export interface MatecuTopbarHeaderRowProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement

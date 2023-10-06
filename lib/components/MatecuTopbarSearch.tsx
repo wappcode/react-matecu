@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import styles from "./MatecuTopbarSearch.module.scss";
 
-interface MatecuTopbarSearchProps {
+export interface MatecuTopbarSearchProps {
   display?: boolean;
   mobileStyle?: boolean;
   searchIcon?: React.ReactNode;

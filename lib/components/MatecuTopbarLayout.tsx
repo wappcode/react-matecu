@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import styles from "./MatecuTopbarLayout.module.scss";
 
-interface MatecuTopbarLayoutProps {
+export interface MatecuTopbarLayoutProps {
   firstRow: React.ReactNode;
   secondRow?: React.ReactNode;
   body?: React.ReactNode;
