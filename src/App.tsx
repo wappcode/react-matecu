@@ -15,8 +15,7 @@ function App() {
   const tobarLayout = useRef<{ scrollTop: () => void }>();
   const [mobileStyle, setMobileStyle] = useState(false);
   const resize = (width: number) => {
-    const mobileStyleValue = width <= 768;
-    setMobileStyle(mobileStyleValue);
+    console.log("resizing", width);
   };
   return (
     <>
@@ -24,6 +23,8 @@ function App() {
         resizeHandler={resize}
         ref={tobarLayout}
         prominent={false}
+        mobileWidth={1024}
+        mobileStyleHandler={setMobileStyle}
         firstRow={
           <MatecuTopbarHeaderRow
             leftColumn={
