@@ -78,9 +78,11 @@ const MatecuTopbarLayout = forwardRef((props: MatecuTopbarLayoutProps, ref) => {
     bodyElement?.current?.addEventListener("scroll", () => {
       spyScroll(bodyElement.current!);
     });
-    resizeObserver.observe(layoutElement.current!);
+    if(layoutElement.current){
+      resizeObserver.observe(layoutElement.current);
+    }
     return () => {
-      bodyElement.current!.removeEventListener("scroll", () => {});
+      bodyElement?.current?.removeEventListener("scroll", () => {});
       resizeObserver.disconnect();
     };
   });
