@@ -5,7 +5,7 @@ Libreria con complementos y utilidades para el desarrollo de aps
 
 ## Instalar
 
-    npm install svelte-matecu
+    npm install react-matecu
 
 Agregar estilos para la fuente de los iconos
 
